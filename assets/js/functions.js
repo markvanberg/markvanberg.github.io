@@ -34,8 +34,8 @@ jQuery(document).ready(function($) {
     -------------------------------------------------------------------*/
 
 
-    
-	/* Main Menu   
+
+	/* Main Menu
 	-------------------------------------------------------------------*/
 	$('#main-menu #headernavigation').onePageNav({
 		currentClass: 'active',
@@ -45,18 +45,18 @@ jQuery(document).ready(function($) {
 		scrollOffset: 0,
 		filter: '',
 		easing: 'swing'
-	});  
+	});
 
-	/* Main Menu End  
+	/* Main Menu End
 	-------------------------------------------------------------------*/
 
 
 
 
-	/* Time Countdown 
+	/* Time Countdown
 	-------------------------------------------------------------------*/
 	$('#time_countdown').countDown({
-        
+
         // targetDate: {
         //     'day': 30,
         //     'month': 9,
@@ -81,10 +81,11 @@ jQuery(document).ready(function($) {
 
 
 
-	/* Next Section   
+	/* Next Section
 	-------------------------------------------------------------------*/
 	$('.next-section .go-to-about').click(function() {
-    	$('html,body').animate({scrollTop:$('#about').offset().top}, 1000);
+    	console.log('go to about clicked');
+        $('html,body').animate({scrollTop:$('#about').offset().top}, 1000);
   	});
   	$('.next-section .go-to-subscribe').click(function() {
     	$('html,body').animate({scrollTop:$('#subscribe').offset().top}, 1000);
@@ -106,17 +107,17 @@ jQuery(document).ready(function($) {
     -------------------------------------------------------------------*/
     $(".news-letter").ajaxChimp({
         callback: mailchimpResponse,
-        url: "http://jeweltheme.us10.list-manage.com/subscribe/post?u=a3e1b6603a9caac983abe3892&amp;id=257cf1a459" // Replace your mailchimp post url inside double quote "".  
+        url: "http://jeweltheme.us10.list-manage.com/subscribe/post?u=a3e1b6603a9caac983abe3892&amp;id=257cf1a459" // Replace your mailchimp post url inside double quote "".
     });
 
     function mailchimpResponse(resp) {
          if(resp.result === 'success') {
-         
+
             $('.alert-success').html(resp.msg).fadeIn().delay(3000).fadeOut();
-            
+
         } else if(resp.result === 'error') {
             $('.alert-warning').html(resp.msg).fadeIn().delay(3000).fadeOut();
-        }  
+        }
     };
 
 
@@ -200,9 +201,9 @@ jQuery(document).ready(function($) {
 	-------------------------------------------------------------------*/
 
 
-    
 
-    
+
+
 
 
 
@@ -212,13 +213,13 @@ jQuery(document).ready(function($) {
 -------------------------------------------------------------------*/
 
 
-/* Preloder 
+/* Preloder
 -------------------------------------------------------------------*/
-$(window).load(function () {    
+$(window).load(function () {
     "use strict";
     $("#loader").fadeOut();
     $("#preloader").delay(350).fadeOut("slow");
 });
  /* Preloder End
 -------------------------------------------------------------------*/
-   
+
