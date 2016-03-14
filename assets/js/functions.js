@@ -2,14 +2,14 @@
 /* Background Images
 -------------------------------------------------------------------*/
 var  pageTopImage = jQuery('#page-top').data('background-image');
-var  aboutImage = jQuery('#about').data('background-image');
-var  subscribeImage = jQuery('#subscribe').data('background-image');
-var  contactImage = jQuery('#contact').data('background-image');
+var photograph1Image = jQuery('#photograph1').data('background-image');
+var photograph2Image = jQuery('#photograph2').data('background-image');
+var photograph3Image = jQuery('#photograph3').data('background-image');
 
 if (pageTopImage) {  jQuery('#page-top').css({ 'background-image':'url(' + pageTopImage + ')' }); };
-if (aboutImage) {  jQuery('#about').css({ 'background-image':'url(' + aboutImage + ')' }); };
-if (subscribeImage) {  jQuery('#subscribe').css({ 'background-image':'url(' + subscribeImage + ')' }); };
-if (contactImage) {  jQuery('#contact').css({ 'background-image':'url(' + contactImage + ')' }); };
+if (photograph1Image) {  jQuery('#photograph1').css({ 'background-image':'url(' + photograph1Image + ')' }); };
+if (photograph2Image) {  jQuery('#photograph2').css({ 'background-image':'url(' + photograph2Image + ')' }); };
+if (photograph3Image) {  jQuery('#photograph3').css({ 'background-image':'url(' + photograph3Image + ')' }); };
 
 /* Background Images End
 -------------------------------------------------------------------*/
@@ -21,7 +21,6 @@ if (contactImage) {  jQuery('#contact').css({ 'background-image':'url(' + contac
 jQuery(document).ready(function($) {
 
 	"use strict";
-
 
     /* Window Height Resize
     -------------------------------------------------------------------*/
@@ -53,17 +52,16 @@ jQuery(document).ready(function($) {
 
 	/* Next Section
 	-------------------------------------------------------------------*/
-	$('.next-section .go-to-about').click(function() {
-    	console.log('go to about clicked');
-        $('html,body').animate({scrollTop:$('#about').offset().top}, 1000);
+	$('.next-section .go-to-photograph1').click(function() {
+        $('html,body').animate({scrollTop:$('#photograph1').offset().top}, 1000);
   	});
-  	$('.next-section .go-to-subscribe').click(function() {
-    	$('html,body').animate({scrollTop:$('#subscribe').offset().top}, 1000);
-  	});
-  	$('.next-section .go-to-contact').click(function() {
-    	$('html,body').animate({scrollTop:$('#contact').offset().top}, 1000);
-  	});
-  	$('.next-section .go-to-page-top').click(function() {
+    $('.next-section-photo .go-to-photograph2').click(function() {
+        $('html,body').animate({scrollTop:$('#photograph2').offset().top}, 1000);
+    });
+    $('.next-section-photo .go-to-photograph3').click(function() {
+        $('html,body').animate({scrollTop:$('#photograph3').offset().top}, 1000);
+    });
+  	$('.next-section-photo .go-to-page-top').click(function() {
     	$('html,body').animate({scrollTop:$('#page-top').offset().top}, 1000);
   	});
 
